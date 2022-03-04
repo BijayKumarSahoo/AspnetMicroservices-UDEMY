@@ -51,7 +51,7 @@ namespace Discount.API.Extenstions
                 {
                     logger.LogError(ex, "An error occurred while migrating the postresql database");
 
-                    if(retryForAvaialability > 50)
+                    if(retryForAvaialability < 50)
                     {
                         retryForAvaialability++;
                         System.Threading.Thread.Sleep(2000);
