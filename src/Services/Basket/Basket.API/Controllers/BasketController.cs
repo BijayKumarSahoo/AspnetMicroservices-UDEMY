@@ -24,6 +24,7 @@ namespace Basket.API.Controllers
 
 
         [HttpGet("{userName}", Name = "GetBasket")]
+        // Add the metadata to the Swagger API
         [ProducesResponseType(typeof(ShoppingCart), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<ShoppingCart>> GetBasket(string userName)
         {
